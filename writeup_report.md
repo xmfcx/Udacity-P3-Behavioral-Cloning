@@ -81,7 +81,7 @@ dense_2 (Dense)      |       (None, 84)           |    10164
 dense_3 (Dense)      |       (None, 1)            |    85        
 
 ##### Model Origin - Inspiration(?):
-This is a modified NVIDIA End to End DL network from 
+This is a modified NVIDIA End to End Driving CNN from 
 https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf
 
 ##### Layers Explanation:
