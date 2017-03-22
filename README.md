@@ -1,4 +1,4 @@
-#**Behavioral Cloning** 
+# **Behavioral Cloning** 
 
 **Behavioral Cloning Project**
 
@@ -9,40 +9,38 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
-
-[//]: # (Image References)
-
-[image1]: https://i.imgur.com/oNs2tFy.png
+https://www.youtube.com/watch?v=57JmNxv2FAQ
+[![Working Video](https://github.com/xmfcx/Udacity-P3-Behavioral-Cloning/blob/master/gif/hs5QPZg.gif)](https://www.youtube.com/watch?v=57JmNxv2FAQ)
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Files Submitted & Code Quality
+### Files Submitted & Code Quality
 
-####1. Submission includes all required files and can be used to run the simulator in autonomous mode
+#### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
-* model.h5 containing a trained convolution neural network 
-* writeup_report.md  summarizing the results
+* model.h5 containing a trained convolution neural network writeup_report
+* README.md  summarizing the results (This file)
 * pre_processor.py pre-process and save raw dataset
 * process-yo.ipynb to showcase a single image pre-processing
 
-####2. Submission includes functional code
+#### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```sh
 python drive.py model.h5
 ```
 
-####3. Submission code is usable and readable
+#### 3. Submission code is usable and readable
 
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. An appropriate model architecture has been employed
+#### 1. An appropriate model architecture has been employed
 ##### Layers:
 model = Sequential()
 
@@ -81,7 +79,7 @@ dense_2 (Dense)      |       (None, 84)           |    10164
 dense_3 (Dense)      |       (None, 1)            |    85        
 
 ##### Model Origin - Inspiration(?):
-This is a modified NVIDIA End to End DL network from 
+This is a modified NVIDIA End to End Driving CNN from 
 https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf
 
 ##### Layers Explanation:
@@ -105,7 +103,7 @@ I could add max-pooling layers but I didn't add them neither because
 I already go over my conv2d layers with strides,
 I don't much have room to further reduction in dimensions.
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 
 I have expressed my views on drop-out layers above.
 
@@ -113,17 +111,17 @@ The model was trained and validated on different data sets to ensure that the mo
 
 The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 57).
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 
 For details about how I created the training data, see the next section. 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### 1. Solution Design Approach
 
 The overall strategy for deriving a model architecture was to mimic nvidia's way with well preprocessed input set.
 
@@ -152,11 +150,11 @@ I could even further reduce this probably but haven't tried.
 At the end of the process, the vehicle is able to drive autonomously around the track 
 without leaving the road at maximum speed like forever.
 
-####2. Final Model Architecture
+#### 2. Final Model Architecture
 
 Already stated above.
 
-####3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set & Training Process
 
 I didn't record my own driving at all because I believe that even the given data should 
 be more than enough to perfectly drive on the road if manipulated well enough.
@@ -172,7 +170,7 @@ My inputs: 3 camera images (center, left, right), steering angle
 
 First I put these 3 images into this preprocessing pipeline:
 
-![alt text][image1]
+![alt text](https://i.imgur.com/oNs2tFy.png "Pipeline")
 
 ###### 3.1.1. Pre-Processing steps and reasons:
 1. Crop
@@ -182,6 +180,7 @@ First I put these 3 images into this preprocessing pipeline:
 3. Add Gaussian Noise
     * Random noise makes data prone to external noises and makes it generalize better, 
     like vaccinating the immune system with weakened microbes.
+    * Also, car should be able to drive on any road, even on rainbows!
 4. Histogram equalization
     * This maximizes the contrast and makes network prone to possible lighting conditions or shadows.
 5. Gaussian Blur
@@ -221,11 +220,21 @@ And it can go there at max speed like forever.
 
 #### 4. Time
 My hardware: i7-6700k, 16GB RAM, Nvidia GTX Titan X
+
 pre_processor.py takes less than 15 seconds on 24108 images that came from simulator.
+
 model.py:
+
 Epoch 1/3 1000/1000 - 141s - loss: 0.0069 - mean_squared_error: 0.0069 - acc: 0.1182 - val_loss: 0.0276 - val_mean_squared_error: 0.0276 - val_acc: 0.1280
+
 Epoch 2/3 1000/1000 - 193s - loss: 3.3157e-04 - mean_squared_error: 3.3157e-04 - acc: 0.1182 - val_loss: 0.0255 - val_mean_squared_error: 0.0255 - val_acc: 0.1283
+
 Epoch 3/3 1000/1000 - 142s - loss: 3.0129e-04 - mean_squared_error: 3.0129e-04 - acc: 0.1182 - val_loss: 0.0250 - val_mean_squared_error: 0.0250 - val_acc: 0.1282
+
 Total 7.93 minutes of training.
 
 Definitely could be less but haven't tried yet.
+
+# Important Dependencies
+keras 2.0.1
+tensorflow-gpu 1.0.1
