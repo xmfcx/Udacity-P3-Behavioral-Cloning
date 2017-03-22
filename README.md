@@ -234,3 +234,7 @@ Epoch 3/3 1000/1000 - 142s - loss: 3.0129e-04 - mean_squared_error: 3.0129e-04 -
 Total 7.93 minutes of training.
 
 Definitely could be less but haven't tried yet.
+
+# Important Dependencies
+keras 2.0.1
+tensorflow-gpu 1.0.1
