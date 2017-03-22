@@ -1,4 +1,4 @@
-#**Behavioral Cloning** 
+# **Behavioral Cloning** 
 
 **Behavioral Cloning Project**
 
@@ -15,12 +15,12 @@ The goals / steps of this project are the following:
 [image1]: https://i.imgur.com/oNs2tFy.png
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Files Submitted & Code Quality
+### Files Submitted & Code Quality
 
-####1. Submission includes all required files and can be used to run the simulator in autonomous mode
+#### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
 * model.py containing the script to create and train the model
@@ -30,19 +30,19 @@ My project includes the following files:
 * pre_processor.py pre-process and save raw dataset
 * process-yo.ipynb to showcase a single image pre-processing
 
-####2. Submission includes functional code
+#### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```sh
 python drive.py model.h5
 ```
 
-####3. Submission code is usable and readable
+#### 3. Submission code is usable and readable
 
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. An appropriate model architecture has been employed
+#### 1. An appropriate model architecture has been employed
 ##### Layers:
 model = Sequential()
 
@@ -105,7 +105,7 @@ I could add max-pooling layers but I didn't add them neither because
 I already go over my conv2d layers with strides,
 I don't much have room to further reduction in dimensions.
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 
 I have expressed my views on drop-out layers above.
 
@@ -113,17 +113,17 @@ The model was trained and validated on different data sets to ensure that the mo
 
 The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 57).
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 
 For details about how I created the training data, see the next section. 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### 1. Solution Design Approach
 
 The overall strategy for deriving a model architecture was to mimic nvidia's way with well preprocessed input set.
 
@@ -152,11 +152,11 @@ I could even further reduce this probably but haven't tried.
 At the end of the process, the vehicle is able to drive autonomously around the track 
 without leaving the road at maximum speed like forever.
 
-####2. Final Model Architecture
+#### 2. Final Model Architecture
 
 Already stated above.
 
-####3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set & Training Process
 
 I didn't record my own driving at all because I believe that even the given data should 
 be more than enough to perfectly drive on the road if manipulated well enough.
