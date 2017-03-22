@@ -9,9 +9,8 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
-[![Working Video](https://j.gifs.com/j290M4.gif)](https://www.youtube.com/watch?v=57JmNxv2FAQ)
-
 https://www.youtube.com/watch?v=57JmNxv2FAQ
+[![Working Video](https://github.com/xmfcx/Udacity-P3-Behavioral-Cloning/blob/master/gif/hs5QPZg.gif)](https://www.youtube.com/watch?v=57JmNxv2FAQ)
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
