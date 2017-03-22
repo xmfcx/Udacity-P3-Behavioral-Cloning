@@ -9,6 +9,7 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
+[![Working Video](https://img.youtube.com/vi/57JmNxv2FAQ.jpg)](https://www.youtube.com/watch?v=57JmNxv2FAQ)
 
 [//]: # (Image References)
 
@@ -221,11 +222,17 @@ And it can go there at max speed like forever.
 
 #### 4. Time
 My hardware: i7-6700k, 16GB RAM, Nvidia GTX Titan X
+
 pre_processor.py takes less than 15 seconds on 24108 images that came from simulator.
+
 model.py:
+
 Epoch 1/3 1000/1000 - 141s - loss: 0.0069 - mean_squared_error: 0.0069 - acc: 0.1182 - val_loss: 0.0276 - val_mean_squared_error: 0.0276 - val_acc: 0.1280
+
 Epoch 2/3 1000/1000 - 193s - loss: 3.3157e-04 - mean_squared_error: 3.3157e-04 - acc: 0.1182 - val_loss: 0.0255 - val_mean_squared_error: 0.0255 - val_acc: 0.1283
+
 Epoch 3/3 1000/1000 - 142s - loss: 3.0129e-04 - mean_squared_error: 3.0129e-04 - acc: 0.1182 - val_loss: 0.0250 - val_mean_squared_error: 0.0250 - val_acc: 0.1282
+
 Total 7.93 minutes of training.
 
 Definitely could be less but haven't tried yet.
