@@ -9,11 +9,9 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
-[![Working Video](http://i.imgur.com/hs5QPZg.gif)](https://www.youtube.com/watch?v=57JmNxv2FAQ)
-https://www.youtube.com/watch?v=57JmNxv2FAQ
-[//]: # (Image References)
+[![Working Video](https://j.gifs.com/j290M4.gif)](https://www.youtube.com/watch?v=57JmNxv2FAQ)
 
-[image1]: https://i.imgur.com/oNs2tFy.png
+https://www.youtube.com/watch?v=57JmNxv2FAQ
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -173,7 +171,7 @@ My inputs: 3 camera images (center, left, right), steering angle
 
 First I put these 3 images into this preprocessing pipeline:
 
-![alt text][image1]
+![alt text](https://i.imgur.com/oNs2tFy.png "Pipeline")
 
 ###### 3.1.1. Pre-Processing steps and reasons:
 1. Crop
