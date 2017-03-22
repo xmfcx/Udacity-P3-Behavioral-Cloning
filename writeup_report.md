@@ -180,6 +180,7 @@ First I put these 3 images into this preprocessing pipeline:
 3. Add Gaussian Noise
     * Random noise makes data prone to external noises and makes it generalize better, 
     like vaccinating the immune system with weakened microbes.
+    * Also, car should be able to drive on any road, even on rainbows!
 4. Histogram equalization
     * This maximizes the contrast and makes network prone to possible lighting conditions or shadows.
 5. Gaussian Blur
