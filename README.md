@@ -11,7 +11,7 @@ The goals / steps of this project are the following:
 
 https://www.youtube.com/watch?v=57JmNxv2FAQ
 [![Working Video](https://github.com/xmfcx/Udacity-P3-Behavioral-Cloning/blob/master/gif/hs5QPZg.gif)](https://www.youtube.com/watch?v=57JmNxv2FAQ)
-writeup_report
+
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
 
