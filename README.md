@@ -11,7 +11,7 @@ The goals / steps of this project are the following:
 
 https://www.youtube.com/watch?v=57JmNxv2FAQ
 [![Working Video](https://github.com/xmfcx/Udacity-P3-Behavioral-Cloning/blob/master/gif/hs5QPZg.gif)](https://www.youtube.com/watch?v=57JmNxv2FAQ)
-
+writeup_report
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
 
@@ -23,8 +23,8 @@ https://www.youtube.com/watch?v=57JmNxv2FAQ
 My project includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
-* model.h5 containing a trained convolution neural network 
-* writeup_report.md  summarizing the results
+* model.h5 containing a trained convolution neural network writeup_report
+* README.md  summarizing the results (This file)
 * pre_processor.py pre-process and save raw dataset
 * process-yo.ipynb to showcase a single image pre-processing
 
